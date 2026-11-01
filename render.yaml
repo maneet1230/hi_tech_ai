@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: ecg-ppg-dashboard
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run frontend.py --server.address 0.0.0.0 --server.port $PORT --server.headless true --browser.gatherUsageStats false
